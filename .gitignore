@@ -23,6 +23,7 @@ data/*
 .idea/*
 .idea_modules/*
 projectFilesBackup/
+*.iml
 
 revision.txt
 
