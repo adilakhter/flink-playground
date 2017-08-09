@@ -21,13 +21,13 @@ under the License.
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.apache.flink.quickstart</groupId>
-	<artifactId>flink-scala-project</artifactId>
+	<groupId>xyz.coyoneda</groupId>
+	<artifactId>flink-playground</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
-	<name>Flink Quickstart Job</name>
-	<url>http://www.myorganization.org</url>
+	<name>Flink Playground</name>
+	<url>http://coyoneda.xyz</url>
 
 	<repositories>
 		<repository>
