@@ -68,6 +68,7 @@ package object quickstart {
 
   class SimpleSource[T:Buildable] extends Iterator[T] with Serializable {
     private[this] val rnd = new Random(hashCode())
+    private[this] var counter = 1
     private[this] var prevUTC = System.currentTimeMillis() - 1000 * 3600 * 24 * 100 //100 days ago...
 
     def hasNext: Boolean = true
