@@ -49,6 +49,7 @@ under the License.
 		<slf4j.version>1.7.7</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
 		<scala.binary.version>2.10</scala.binary.version>
+		<graphite.version>3.1.2</graphite.version>
 	</properties>
 
 	<!-- 
@@ -116,6 +117,29 @@ under the License.
 			<artifactId>flink-connector-kafka-0.10_2.10</artifactId>
 			<version>1.2.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>io.dropwizard.metrics</groupId>
+			<artifactId>metrics-core</artifactId>
+			<version>${graphite.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>io.dropwizard.metrics</groupId>
+			<artifactId>metrics-graphite</artifactId>
+			<version>${graphite.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -156,6 +180,30 @@ under the License.
 					<version>${log4j.version}</version>
 					<scope>provided</scope>
 				</dependency>
+
+				<dependency>
+					<groupId>io.dropwizard.metrics</groupId>
+					<artifactId>metrics-core</artifactId>
+					<version>${graphite.version}</version>
+					<exclusions>
+						<exclusion>
+							<groupId>org.slf4j</groupId>
+							<artifactId>jcl-over-slf4j</artifactId>
+						</exclusion>
+					</exclusions>
+				</dependency>
+				<dependency>
+					<groupId>io.dropwizard.metrics</groupId>
+					<artifactId>metrics-graphite</artifactId>
+					<version>${graphite.version}</version>
+					<exclusions>
+						<exclusion>
+							<groupId>org.slf4j</groupId>
+							<artifactId>jcl-over-slf4j</artifactId>
+						</exclusion>
+					</exclusions>
+				</dependency>
+
 			</dependencies>
 
 			<build>

@@ -7,13 +7,9 @@ import org.apache.flink.streaming.api.functions.co.{CoFlatMapFunction, CoMapFunc
 import org.apache.flink.streaming.api.scala.{ConnectedStreams, DataStream, KeyedStream, StreamExecutionEnvironment}
 
 
+import org.apache.flink.streaming.api.scala._
 
-object ConnectedStreamDemo extends App {
-
-
-  implicit val t1 = TypeInformation.of(classOf[Int])
-  implicit val t2 = TypeInformation.of(classOf[String])
-  implicit val t3 = TypeInformation.of(classOf[Customer])
+object ConnectedDataStreamDemo extends App {
 
   val env = StreamExecutionEnvironment.getExecutionEnvironment
   env.setStreamTimeCharacteristic(TimeCharacteristic.IngestionTime)
